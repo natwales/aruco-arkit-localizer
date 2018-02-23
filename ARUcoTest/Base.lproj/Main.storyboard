@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Yz-DT-4X9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARUcoTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BrB-h1-WRS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </arscnView>
+                    <connections>
+                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="459"/>
+        </scene>
+        <!--ARView-->
+        <scene sceneID="DL0-Fq-v37">
+            <objects>
+                <viewController id="0Yz-DT-4X9" userLabel="ARView" customClass="ARViewController" customModule="ARUcoTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LSp-Ma-njc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="CameraSetup.scn" wantsMultisampling="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nCi-UY-Nsg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0Yz-DT-4X9" id="oJw-UW-Mf6"/>
+                                </connections>
+                            </arscnView>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4l-BB-ehO">
+                                <rect key="frame" x="15" y="25" width="191" height="38"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YOh-8d-uu8">
+                                    <rect key="frame" x="0.0" y="0.0" width="191" height="38"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initializing AR session." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6v-Iu-wfW">
+                                            <rect key="frame" x="8" y="8" width="169" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="6Hc-X2-wGR"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="zWd-Lo-1YM"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="s6v-Iu-wfW" firstAttribute="top" secondItem="YOh-8d-uu8" secondAttribute="top" constant="8" id="6re-jv-AfR"/>
+                                        <constraint firstItem="s6v-Iu-wfW" firstAttribute="leading" secondItem="YOh-8d-uu8" secondAttribute="leading" constant="8" id="Hk7-eH-SxI"/>
+                                        <constraint firstAttribute="bottom" secondItem="s6v-Iu-wfW" secondAttribute="bottom" constant="8" id="PQ9-gu-xe2"/>
+                                        <constraint firstAttribute="trailing" secondItem="s6v-Iu-wfW" secondAttribute="trailing" constant="14" id="p2A-Un-Xff"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q4l-BB-ehO" firstAttribute="top" secondItem="cQD-yf-4zf" secondAttribute="top" constant="5" id="7hv-j3-8B9"/>
+                            <constraint firstAttribute="top" secondItem="nCi-UY-Nsg" secondAttribute="top" id="Kro-9K-h2z"/>
+                            <constraint firstItem="Q4l-BB-ehO" firstAttribute="leading" secondItem="cQD-yf-4zf" secondAttribute="leading" constant="15" id="L3P-SG-VIt"/>
+                            <constraint firstAttribute="bottom" secondItem="nCi-UY-Nsg" secondAttribute="bottom" id="M4r-6e-0Ay"/>
+                            <constraint firstItem="nCi-UY-Nsg" firstAttribute="leading" secondItem="cQD-yf-4zf" secondAttribute="leading" id="Nbw-V0-nee"/>
+                            <constraint firstItem="cQD-yf-4zf" firstAttribute="trailing" secondItem="nCi-UY-Nsg" secondAttribute="trailing" id="tBI-6Q-uBM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cQD-yf-4zf"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="nCi-UY-Nsg" id="lXT-0n-rWj"/>
+                        <outlet property="sessionInfoLabel" destination="s6v-Iu-wfW" id="u2W-Qz-KU1"/>
+                        <outlet property="sessionInfoView" destination="Q4l-BB-ehO" id="GE5-QD-3OA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V7k-ax-Lgn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029.5999999999999" y="-222.63868065967017"/>
+        </scene>
+    </scenes>
+</document>
