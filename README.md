@@ -32,4 +32,6 @@ http://ksimek.github.io/2012/08/14/decompose/
 
 https://docs.opencv.org/3.1.0/d5/dae/tutorial_aruco_detection.html
 
+http://answers.opencv.org/question/23089/opencv-opengl-proper-camera-pose-using-solvepnp/
+
 https://stackoverflow.com/questions/44257592/scenekit-3d-marker-augmented-reality-ios
