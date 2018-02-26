@@ -29,5 +29,7 @@ Unity demo coming soon.
 I found the following sources particularly helpful in getting this demo working.
 
 http://ksimek.github.io/2012/08/14/decompose/
+
 https://docs.opencv.org/3.1.0/d5/dae/tutorial_aruco_detection.html
+
 https://stackoverflow.com/questions/44257592/scenekit-3d-marker-augmented-reality-ios
