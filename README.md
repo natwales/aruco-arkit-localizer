@@ -10,7 +10,7 @@ Bare-bones Arkit demo using opencv ArUco markers to obtain camera pose as a mean
 
 3. Now you can add AR objects (red boxes) around your physical enviornment. 
 
-4. Hit save. 
+4. Hit save. This saves transformations for each object locally on the device.
 
 5. Relaunch the app, and again localize to the marker. Assuming the marker has not been moved, you can now load in the objects previously saved at the same positions in real world space.
 
