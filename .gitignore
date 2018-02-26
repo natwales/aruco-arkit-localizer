@@ -33,7 +33,4 @@ xcuserdata/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 
-### Large Files ###
-opencv2.framework
-
 # End of https://www.gitignore.io/api/xcode
